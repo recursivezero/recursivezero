@@ -1,0 +1,24 @@
+---
+import FeaturesCard from "./FeaturesCard.astro";
+---
+
+<section>
+    <div id="featuresSection" class="p-[20px] lg:py-[50px] bg-[#222]">
+        <div class="max-w-[60rem] mx-auto">
+            <div class="section-header mb-[20px]">
+                <h2
+                    class="text-[27px] leading-[32.8px] tracking-[-0.54px] font-bold md:text-[31.2px] md:leading-[37.5px] md:tracking-[-0.62px]"
+                >
+                    Features
+                </h2>
+            </div>
+            <div
+                class="cards-container grid grid-cols-1 md:grid-cols-2 gap-[10px] lg:grid-cols-3"
+            >
+                <FeaturesCard />
+                <FeaturesCard />
+                <FeaturesCard />
+            </div>
+        </div>
+    </div>
+</section>
