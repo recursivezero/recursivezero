@@ -4,7 +4,8 @@ title: "[Bug]: "
 labels: ["bug", "triage"]
 projects: ["recursivezero"]
 assignees:
-  - "xkeshav", "recursivezero"
+  - "xkeshav"
+  - "recursivezero"
 body:
   - type: markdown
     attributes:
