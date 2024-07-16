@@ -2,10 +2,13 @@ name: Bug Report
 description: File a bug report.
 title: "[Bug]: "
 labels: ["bug", "triage"]
-projects: ["recusrivezero"]
+projects: ["recursivezero"]
 assignees:
   - xkeshav
 body:
+  - type: markdown
+    attributes:
+      value: '## Welcome!"
   - type: markdown
     attributes:
       value: |
@@ -33,11 +36,11 @@ body:
       label: Version
       description: What version of our software are you running?
       options:
-        - 1.0.2 (Default)
+        - latest (Default)
         - 1.0.3 (Edge)
       default: 0
     validations:
-      required: true
+      required: false
   - type: dropdown
     id: browsers
     attributes:
