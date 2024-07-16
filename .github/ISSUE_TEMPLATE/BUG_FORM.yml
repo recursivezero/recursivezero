@@ -8,7 +8,7 @@ assignees:
 body:
   - type: markdown
     attributes:
-      value: '## Welcome!"
+      value: "## Welcome!"
   - type: markdown
     attributes:
       value: |
