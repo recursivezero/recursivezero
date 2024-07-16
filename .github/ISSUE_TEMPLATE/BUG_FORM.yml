@@ -37,9 +37,9 @@ body:
     id: additional
     attributes:
       label: Anything else we need to know?
-       description: |
+      description: |
         Please provide other details if it is necessary.
-       placeholder: Software version and device details!
+      placeholder: Software version and device details!
     validations:
       required: false
       
