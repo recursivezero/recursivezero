@@ -27,6 +27,9 @@ body:
     id: expected
     attributes:
       label: What did you expect to happen?
+      description: |
+        Please provide expected result/output.
+      placeholder: Tell us what is expected !
     validations:
       required: true
 
@@ -34,16 +37,9 @@ body:
     id: additional
     attributes:
       label: Anything else we need to know?
-      
-  - type: dropdown
-    id: version
-    attributes:
-      label: Version
-      description: What version of our software are you running?
-      options:
-        - latest (Default)
-        - 1.0.3 (Edge)
-      default: 0
+       description: |
+        Please provide other details if it is necessary.
+      placeholder: Software version and device details!
     validations:
       required: false
       
