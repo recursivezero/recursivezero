@@ -1,0 +1,100 @@
+---
+import NavBar from "../components/NavBar.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Livvic:wght@100;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>{title}</title>
+  </head>
+  <body id="pageBody" class="darkBg">
+    <NavBar />
+    <slot />
+    <script>
+      function toggleStyle(elem: HTMLElement) {
+        if (elem.classList.contains("darkBg")) {
+          elem.classList.remove("darkBg");
+					elem.classList.add("lightBg");
+        } else if (elem.classList.contains("lightBg")) {
+          elem.classList.remove("lightBg");
+          elem.classList.add("darkBg");
+        }
+      }
+      const themeToggle = document.querySelector("#themeToggle");
+      const bodyPart = document.querySelector("body");
+      themeToggle.addEventListener("click", () => {
+        toggleStyle(bodyPart);
+      });
+    </script>
+  </body>
+</html>
+<style is:global>
+  :root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      rgb(var(--accent-light)) 30%,
+      white 60%
+    );
+  }
+
+  html {
+    font-family: system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+	body {
+    padding: 0;
+    margin: 0;
+    font-family: "Livvic", sans-serif;
+    background: #111;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+
+  .outline {
+    outline: 1px solid greenyellow;
+  }
+
+  .whiteBg {
+    background-color: #eee;
+    color: #111;
+  }
+
+  .darkBg {
+    background-color: #222;
+    color: #fff;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  .blackBtnHover:hover {
+    background-color: #1c1c1c;
+    color: #b8b8b8;
+  }
+
+  .yellowBtnHover:hover {
+    background-color: #b89405;
+  }
+</style>

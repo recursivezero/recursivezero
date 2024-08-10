@@ -1,0 +1,73 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "plugins": [
+      {
+        "name": "@astrojs/ts-plugin"
+      }
+    ],
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "lib": [
+      "es2022",
+      "dom",
+      "dom.iterable"
+    ],
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "noImplicitAny": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "target": "ESNext",
+    "paths": {
+      "@/assets/*": [
+        "src/assets/*"
+      ],
+      "@/components/*": [
+        "src/components/*"
+      ],
+      "@/layouts/*": [
+        "src/layouts/*.astro"
+      ],
+      "@/utils/*": [
+        "src/utils/*"
+      ],
+      "@/libs": [
+        "src/libs/index.ts"
+      ],
+      "@/types": [
+        "src/types.ts"
+      ],
+      "@/hooks/*": [
+        "src/hooks/*"
+      ],
+      "@/models": [
+        "src/models/index.ts"
+      ],
+      "@/site-config": [
+        "src/site.config.ts"
+      ]
+    },
+    "verbatimModuleSyntax": true
+  },
+  "include": [
+    "src",
+    "*.ts",
+    "*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/node_modules/*",
+    ".vscode",
+    "dist",
+    ".eslintrc.js"
+  ]
+}
