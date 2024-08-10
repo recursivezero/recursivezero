@@ -2,7 +2,7 @@
 import NavBar from "../components/NavBar.astro";
 
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -10,218 +10,91 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Livvic:wght@100;400;700&display=swap"
-			rel="stylesheet"
-		/>
-		<title>{title}</title>
-	</head>
-	<body id="pageBody" class="darkBg">
-		<NavBar />
-		<slot />
-		<script
-			is:inline
-			src="https://kit.fontawesome.com/3f72f7b724.js"
-			crossorigin="anonymous"></script>
-		<script>
-			const themeToggle = document.querySelector('#themeToggle')
-			console.log(themeToggle, 'tt')
-
-
-			themeToggle.addEventListener('click', () => {
-				const pageBody = document.querySelector('#pageBody')
-				
-				pageBody.classList.toggle('whiteBg')
-				const aboutText = document.querySelector('#aboutText')
-				const aboutParagrapgh = document.querySelector('#aboutParagrapgh')
-				const navBg = document.querySelector('#navBg')
-				const buttonTheme = document.querySelectorAll('.buttonTheme')
-				const reviewCard = document.querySelectorAll('.reviewCard')
-				const featuresSection = document.querySelector('#featuresSection')
-				const featuresCard = document.querySelectorAll('.featuresCard')
-				const newsLetterSection = document.querySelector('#newsLetterSection')
-				const newsLetterText = document.querySelector('#newsLetterText')
-				const formInputBg = document.querySelectorAll('.formInputBg')
-				const socialLink = document.querySelectorAll('.social-link')
-				const footerTop = document.querySelector('.footer-top')
-				const moonBtn = document.querySelector('.moonBtn')
-				const sunBtn = document.querySelector('.sunBtn')
-				const appsSimplifyText = document.querySelector('.appSimplifyText')
-				const contactSectionText = document.querySelector('.contactSectionText')
-				const footerBottomA = document.querySelector('.footerBottomA')
-				const footerBottomB = document.querySelector('.footerBottomB')
-				// console.log(footerTop, 'mm')
-
-				if (pageBody.classList.contains('whiteBg')) {
-					moonBtn.style.display = 'flex'
-					sunBtn.style.display = 'none'
-				} else {
-					moonBtn.style.display = 'none'
-					sunBtn.style.display = 'flex'
-				}
-
-				if (pageBody.classList.contains('whiteBg')) {
-					navBg.style.backgroundColor = '#ffffff'
-					navBg.style.color = '#111'
-					navBg.style.boxShadow = '0px 3px 5px #eeeeee'
-					aboutText.style.backgroundColor = '#EEE'
-					aboutParagrapgh.style.color = '#666'
-					// buttonTheme.style.backgroundColor = '#eee'
-					// reviewCard.style.backgroundColor = '#eee'
-					featuresSection.style.backgroundColor = '#eee'
-					// featuresCard.style.backgroundColor = '#eee'
-					newsLetterSection.style.backgroundColor = '#eee'
-					newsLetterText.style.color = '#666'
-					inputBg.style.backgroundColor = '#ffffff'
-					inputBg.style.border = '#eee'
-					footerTop.style.borderBottom = '1px solid #eee'
-					appsSimplifyText.style.color = '#666'
-					contactSectionText.style.color = '#666'
-					footerBottomA.style.color = '#111'
-					footerBottomB.style.color = '#111'
-				} else {
-					navBg.style.backgroundColor = '#111111'
-					navBg.style.color = '#ffffff'
-					navBg.style.boxShadow = '0px 3px 10px #0e0e0e'
-					aboutText.style.backgroundColor = '#222'
-					aboutParagrapgh.style.color = '#999'
-					// buttonTheme.style.backgroundColor = '#222'
-					// reviewCard.style.backgroundColor = '#222'
-					featuresSection.style.backgroundColor = '#222'
-					// featuresCard.style.backgroundColor = '#222'
-					newsLetterSection.style.backgroundColor = '#222'
-					newsLetterText.style.color = '#999'
-					inputBg.style.backgroundColor = '#111'
-					inputBg.style.border = '#111'
-					footerTop.style.borderBottom = '1px solid #222'
-					appsSimplifyText.style.color = '#111'
-					contactSectionText.style.color = '#111'
-					footerBottomA.style.color = '#999' 
-					footerBottomB.style.color = '#fff' 
-				}
-
-				featuresCard.forEach((el) => {
-					if (pageBody.classList.contains('whiteBg')) {
-						el.style.backgroundColor = '#eee'
-					} else {
-						el.style.backgroundColor = '#222'
-					}
-				})
-
-				reviewCard.forEach((el) => {
-					if (pageBody.classList.contains('whiteBg')) {
-						el.style.backgroundColor = '#eee'
-					} else {
-						el.style.backgroundColor = '#222'
-					}
-				})
-
-				buttonTheme.forEach((el) => {
-					if (pageBody.classList.contains('whiteBg')) {
-						el.style.backgroundColor = '#eee'
-					} else {
-						el.style.backgroundColor = '#222'
-					}
-				})
-
-				formInputBg.forEach((el) => {
-					if (pageBody.classList.contains('whiteBg')) {
-						el.style.backgroundColor = '#eee'
-					} else {
-						el.style.backgroundColor = '#222'
-					}
-				})
-
-				socialLink.forEach((el) => {
-					if (pageBody.classList.contains('whiteBg')) {
-						el.style.backgroundColor = '#eee'
-					} else {
-						el.style.backgroundColor = '#222'
-					}
-				})
-
-				// footerBottom.forEach((el) => {
-				// 	if (pageBody.classList.contains('whiteBg')) {
-				// 		el.style.color = '#eeeeee'
-				// 	} else {
-				// 		el.style.color = '#999'
-				// 	}
-				// })
-			})
-		</script>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Livvic:wght@100;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>{title}</title>
+  </head>
+  <body id="pageBody" class="darkBg">
+    <NavBar />
+    <slot />
+    <script>
+      function toggleStyle(elem: HTMLElement) {
+        if (elem.classList.contains("darkBg")) {
+          elem.classList.remove("darkBg");
+					elem.classList.add("lightBg");
+        } else if (elem.classList.contains("lightBg")) {
+          elem.classList.remove("lightBg");
+          elem.classList.add("darkBg");
+        }
+      }
+      const themeToggle = document.querySelector("#themeToggle");
+      const bodyPart = document.querySelector("body");
+      themeToggle.addEventListener("click", () => {
+        toggleStyle(bodyPart);
+      });
+    </script>
+  </body>
 </html>
 <style is:global>
-	/* :root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	} */
-	/* html {
-		font-family: system-ui, sans-serif;
-		background: #111;
-		background-size: 224px;
-	} */
+  :root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      rgb(var(--accent-light)) 30%,
+      white 60%
+    );
+  }
 
-	/* * {
-		outline: 1px solid greenyellow
-	} */
-
-	html {
-		scroll-behavior: smooth;
-	}
-
-	.whiteBg {
-		background-color: #ffffff;
-		color: #111;
-	}
-
-	/* .darkBg {
-		background-color: #111;
-	} */
-
+  html {
+    font-family: system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
 	body {
-		padding: 0;
-		margin: 0;
-		font-family: "Livvic", sans-serif;
-		background: #111;
-		color: white;
-		transition: background-color 0.3s ease;
-	}
+    padding: 0;
+    margin: 0;
+    font-family: "Livvic", sans-serif;
+    background: #111;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
 
-	textarea {
-		resize: none;
-	}
+  .outline {
+    outline: 1px solid greenyellow;
+  }
 
-	.blackBtnHover:hover {
-		background-color: #1c1c1c;
-		color: #b8b8b8;
-	}
+  .whiteBg {
+    background-color: #eee;
+    color: #111;
+  }
 
-	.yellowBtnHover:hover {
-		background-color: #b89405;
-	}
+  .darkBg {
+    background-color: #222;
+    color: #fff;
+  }
 
+  textarea {
+    resize: none;
+  }
+
+  .blackBtnHover:hover {
+    background-color: #1c1c1c;
+    color: #b8b8b8;
+  }
+
+  .yellowBtnHover:hover {
+    background-color: #b89405;
+  }
 </style>

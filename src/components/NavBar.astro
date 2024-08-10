@@ -1,101 +1,96 @@
 <header
-    id="navBg"
-    class="header text-white bg-[#111] p-[1.25rem] z-10 fixed top-0 w-full lg:w-full xl:px-[10.2rem] 2xl:px-[18.2rem] lg:py-[1.5rem] shadow-[#0e0e0e] shadow"
+  id="navBg"
+  class="header text-white bg-[#111] p-[1.25rem] z-10 fixed top-0 w-full lg:w-full xl:px-[10.2rem] 2xl:px-[18.2rem] lg:py-[1.5rem] shadow-[#0e0e0e] shadow"
 >
-    <div class="nav-container max-w-[60rem] mx-auto">
-        <nav class="">
-            <div class="nav-div flex justify-between items-center">
-                <h1
-                    class="leading-[-0.03em] text-[1.05rem] lg:text-[1.2rem] font-bold"
-                >
-                    <a href="/"> Recursive Zero</a>
-                </h1>
-                <ul
-                    class="menu-list flex items-center lg:flex-row-reverse gap-[1.5rem]"
-                >
-                    <li id="themeToggle">
-                        <button class="sunBtn">
-                            <i class="fa fa-sun-o" aria-hidden="true"></i>
-                        </button>
-                        <button class="moonBtn hidden">
-                            <i class="fa fa-moon-o" aria-hidden="true"></i>
-                        </button>
-                    </li>
-                    <li id="menuToggle" class="lg:hidden menu-button">
-                        <button id="closeBtn" class="hidden ml-[3px]">
-                            <i class="fa fa-times" aria-hidden="true"></i>
-                        </button>
-                        <button id="openBtn">
-                            <i class="fa fa-bars" aria-hidden="true"></i>
-                        </button>
-                    </li>
-                    <!-- desktop menu -->
-                    <div
-                        class="hidden lg:flex items-center gap-[0.7rem] text-[16px] leading-[25.6px]"
-                    >
-                        <a href="">
-                            <button
-                                class="buttonTheme learn-btn bg-[#222] px-[10px] py-[5px] rounded-md blackBtnHover"
-                            >
-                                Start Innovating Now
-                            </button>
-                        </a>
-                        <a href="">
-                            <button
-                                class="bg-[#FFCC00] px-[10px] py-[5px] rounded-md text-[#111] yellowBtnHover"
-                            >
-                                Start Saving Time!
-                            </button>
-                        </a>
-                    </div>
-                </ul>
-            </div>
-            <!-- mobile nav-overlay -->
-            <div
-                id="menu-open"
-                class="nav-overlay hidden pt-[20px] h-dvh lg:hidden"
-            >
-                <div class="pt-[10px]">
-                    <div
-                        class="py-[20px] flex flex-col gap-[20px] items-center justify-between text-[14px] leading-[22.4px] md:text-[16px] md:leading-[25.6px]"
-                    >
-                        <a href="" class="w-full">
-                            <button
-                                class="buttonTheme bg-[#222] py-[5px] px-[10px] h-[35px] w-full rounded-md"
-                            >
-                                Start Innovating Now
-                            </button>
-                        </a>
-                        <a href="" class="w-full">
-                            <button
-                                class="bg-[#FFCC00] py-[5px] px-[10px] h-[35px] w-full rounded-md text-[#111]"
-                            >
-                                Start Saving Time!
-                            </button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </div>
+  <div class="nav-container max-w-[60rem] mx-auto">
+    <nav class="">
+      <div class="nav-div flex justify-between items-center">
+        <h1 class="leading-[-0.03em] text-[1.05rem] lg:text-[1.2rem] font-bold">
+          <a href="/"> Recursive Zero</a>
+        </h1>
+        <ul
+          class="menu-list flex items-center lg:flex-row-reverse gap-[1.5rem]"
+        >
+          <li id="themeToggle">
+            <button class="sunBtn">
+              <i class="fa fa-sun-o" aria-hidden="true">Light</i>
+            </button>
+            <button class="moonBtn hidden">
+              <i class="fa fa-moon-o" aria-hidden="true">Dark</i>
+            </button>
+          </li>
+          <li id="menuToggle" class="lg:hidden menu-button">
+            <button id="closeBtn" class="hidden ml-[3px]">
+              <i class="fa fa-times" aria-hidden="true"></i>
+            </button>
+            <button id="openBtn">
+              <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+          </li>
+          <!-- desktop menu -->
+          <div
+            class="hidden lg:flex items-center gap-[0.7rem] text-[16px] leading-[25.6px]"
+          >
+            <a href="">
+              <button
+                class="buttonTheme learn-btn bg-[#222] px-[10px] py-[5px] rounded-md blackBtnHover"
+              >
+                Start Innovating Now
+              </button>
+            </a>
+            <a href="">
+              <button
+                class="bg-[#FFCC00] px-[10px] py-[5px] rounded-md text-[#111] yellowBtnHover"
+              >
+                Start Saving Time!
+              </button>
+            </a>
+          </div>
+        </ul>
+      </div>
+      <!-- mobile nav-overlay -->
+      <div id="menu-open" class="nav-overlay hidden pt-[20px] h-dvh lg:hidden">
+        <div class="pt-[10px]">
+          <div
+            class="py-[20px] flex flex-col gap-[20px] items-center justify-between text-[14px] leading-[22.4px] md:text-[16px] md:leading-[25.6px]"
+          >
+            <a href="" class="w-full">
+              <button
+                class="buttonTheme bg-[#222] py-[5px] px-[10px] h-[35px] w-full rounded-md"
+              >
+                Start Innovating Now
+              </button>
+            </a>
+            <a href="" class="w-full">
+              <button
+                class="bg-[#FFCC00] py-[5px] px-[10px] h-[35px] w-full rounded-md text-[#111]"
+              >
+                Start Saving Time!
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
 </header>
 
 <script>
-    const menuToggle = document.querySelector("#menuToggle");
+  const menuToggle = document.querySelector("#menuToggle");
 
-    menuToggle.addEventListener("click", () => {
-        const showMenu = document.querySelector("#menu-open");
-        const openBtn = document.querySelector("#openBtn");
-        const closeBtn = document.querySelector("#closeBtn");
+  menuToggle.addEventListener("click", () => {
+    const showMenu = document.querySelector("#menu-open");
+    const openBtn = document.querySelector("#openBtn");
+    const closeBtn = document.querySelector("#closeBtn");
 
-        if (showMenu.style.display === "block") {
-            showMenu.style.display = "none";
-            closeBtn.style.display = "none";
-            openBtn.style.display = "inline";
-        } else {
-            showMenu.style.display = "block";
-            closeBtn.style.display = "inline";
-            openBtn.style.display = "none";
-        }
-    });
+    if (showMenu.style.display === "block") {
+      showMenu.style.display = "none";
+      closeBtn.style.display = "none";
+      openBtn.style.display = "inline";
+    } else {
+      showMenu.style.display = "block";
+      closeBtn.style.display = "inline";
+      openBtn.style.display = "none";
+    }
+  });
 </script>
