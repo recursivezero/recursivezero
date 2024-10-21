@@ -1,13 +1,7 @@
-# Lines starting with '#' are comments.
-# Each line is a file pattern followed by one or more owners.
+# Lines starting with '#' are comments
 
-# These owners will be the default owners for everything in the repo.
-*       @recursivezero
+* @recursivezero
 
-# Order is important. The last matching pattern has the most precedence.
-# So if a pull request only touches javascript files, only these owners
-# will be requested to review.
-*.js    @xkeshav
+## You can also use email addresses if you prefer
 
-# You can also use email addresses if you prefer.
-docs/*  recursivezero@outlook.com
+docs/* recursivezero@outlook.com

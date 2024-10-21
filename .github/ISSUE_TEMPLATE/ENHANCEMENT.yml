@@ -1,6 +1,9 @@
 name: Enhancement Tracking Issue
 description: Provide supporting details for a feature in development
-labels: kind/feature
+title: "[🪡]: "
+labels: [enhancement]
+assignees: recursivezero
+
 body:
   - type: textarea
     id: feature
