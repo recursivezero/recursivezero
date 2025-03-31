@@ -1,0 +1,25 @@
+import { c as createComponent, r as renderTemplate, a as renderComponent, m as maybeRenderHead } from '../chunks/astro/server_N9GWUwvf.mjs';
+import 'kleur/colors';
+import { $ as $$BaseLayout } from '../chunks/BaseLayout_BIk6jwWF.mjs';
+/* empty css                                  */
+export { renderers } from '../renderers.mjs';
+
+const $$Career = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "meta": { title: "Careers at RecursiveZero" } }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<main class="careers__container"> <div class="careers__header"> <h1 class="careers__title">Join Our Team</h1> <p class="careers__subtitle">Build the future with us</p> </div> <div class="grid gap-8 pb-12"> <section class="section__container"> <h2 class="about__title">Current Openings</h2> <div> <div class="job__card"> <h3 class="job__title">Senior Frontend Developer</h3> <p class="job__description">We're looking for an experienced frontend developer to join our team.</p> <div class="tag__container"> <span class="tag tag--remote">Remote</span> <span class="tag tag--fulltime">Full-time</span> </div> </div> <div class="job__card"> <h3 class="job__title">Backend Engineer</h3> <p class="job__description">Join us in building scalable backend solutions.</p> <div class="tag__container"> <span class="tag tag--hybrid">Hybrid</span> <span class="tag tag--fulltime">Full-time</span> </div> </div> </div> </section> <section class="section__container"> <h2 class="about__title">Why Join RecursiveZero?</h2> <div class="perks__grid"> <div class="perk__card"> <h3 class="perk__title">Remote First</h3> <p class="perk__description">Work from anywhere in the world</p> </div> <div class="perk__card"> <h3 class="perk__title">Learning & Growth</h3> <p class="perk__description">Continuous learning opportunities</p> </div> <div class="perk__card"> <h3 class="perk__title">Great Benefits</h3> <p class="perk__description">Competitive salary and benefits package</p> </div> </div> </section> <section class="section__container"> <h2 class="about__title">How to Apply</h2> <p class="job__description">
+Send your resume and a brief cover letter to
+<a href="mailto:hello@recursivezero.com" class="apply__link"> hellow@recursivezero.com </a> </p> </section> </div> </main> ` })}`;
+}, "/home/recursive/dev/recursivezero/recursivezero/src/pages/career.astro", void 0);
+
+const $$file = "/home/recursive/dev/recursivezero/recursivezero/src/pages/career.astro";
+const $$url = "/career";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Career,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

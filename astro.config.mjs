@@ -1,19 +1,21 @@
 import mdx from "@astrojs/mdx";
-import node from "@astrojs/node";
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
-import { defineConfig } from "astro/config";
+import awsAmplify from "astro-aws-amplify";
+import { defineConfig, passthroughImageService } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://recursivezero.com",
   prefetch: true,
-  output: "static",
   devToolbar: {
     enabled: false
   },
   experimental: {
     svg: true
+  },
+  image: {
+    service: passthroughImageService()
   },
   integrations: [
     mdx(),
@@ -25,7 +27,8 @@ export default defineConfig({
       nesting: true
     })
   ],
-  adapter: node({ mode: "standalone" }),
+  adapter: awsAmplify(),
+  output: "server",
   style: {
     global: true // Ensure global styles are applied
   },

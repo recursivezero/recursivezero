@@ -1,0 +1,49 @@
+---
+import "src/assets/styles/theme.css";
+---
+
+<section>
+  <select id="theme">
+    <option value="light">light</option>
+    <option value="dark">dark</option>
+  </select>
+</section>
+<main>
+  <h1 class="fluid">switching<br />themes in 3d</h1>
+  <p>
+    Making use of View Transitions and CSS
+    <code>perspective()</code>.<br /><strong>The Trick:</strong> Apply a chained transform to both <code
+      >::view-transition-new</code
+    > and
+    <code>::view-transition-old</code> using <code>perspective()</code> as a base.
+  </p>
+</main>
+
+<script is:inline>
+  const config = {
+    theme: "system",
+    perspective: 400,
+    distance: 0.75,
+    duration: 1.2,
+    invert: true
+  };
+
+  const ctrl = document.getElementById("theme");
+
+  const update = () => {
+    document.documentElement.dataset.theme = config.theme;
+    document.documentElement.dataset.invert = config.invert;
+    document.documentElement.style.setProperty("--perspective", `${config.perspective}vmax`);
+    document.documentElement.style.setProperty("--distance", `-${config.distance}`);
+    document.documentElement.style.setProperty("--duration", `${config.duration}s`);
+  };
+
+  const sync = (event) => {
+    if (!document.startViewTransition || event.target.controller.view.labelElement.innerText !== "theme")
+      return update();
+    document.startViewTransition(update);
+  };
+
+  ctrl?.addEventListener("change", sync);
+  update();
+</script>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  fill="current" viewBox="0 0 100 80" width="30" height="30">
+  <title>Hamburger Menu</title>
+  <symbol id="line">
+    <rect width="100" height="20" fill="currentColor"></rect>
+  </symbol>
+  <use xlink:href="#line" y="0" />
+  <use xlink:href="#line" y="30" />
+  <use xlink:href="#line" y="60" />
+</svg>

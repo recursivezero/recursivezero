@@ -1,0 +1,27 @@
+{
+  "name": "APP Name",
+  "id": "App Name",
+  "short_name": "App Name",
+  "description": "A virtual front store for textile industry",
+  "icons": [
+    {
+      "src": "/192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#1d1f21",
+  "theme_color": "#2bbc8a",
+  "display": "standalone",
+  "lang": "en",
+  "orientation": "portrait",
+  "category": "business"
+}

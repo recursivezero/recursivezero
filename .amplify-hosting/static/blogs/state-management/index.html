@@ -1,0 +1,139 @@
+<!DOCTYPE html><html lang="en-GB"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>The new era of state management with Zustand ? • recursivezero.com</title><link rel="icon" href="/assets/images/favicon-32x32.png" type="image/png" sizes="32x32"><link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml"><link rel="shortcut icon" href="/assets/images/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png"><link rel="manifest" href="/manifest.webmanifest"><link rel="canonical" href="https://recursivezero.com/blogs/state-management/"><meta name="title" content="The new era of state management with Zustand ? • recursivezero.com"><meta name="description" content="The simple and easy to understand all about Zustand the new and simple way to manage the state in client side. "><meta name="author" content="recursive Zero"><meta name="theme-color" content="dark"><meta name="color-scheme" content="light dark"><meta property="og:type" content="website"><meta property="og:title" content="The new era of state management with Zustand ?"><meta property="og:description" content="The simple and easy to understand all about Zustand the new and simple way to manage the state in client side. "><meta property="og:url" content="https://recursivezero.com/blogs/state-management/"><meta property="og:site_name" content="recursivezero.com"><meta property="og:locale" content="en_GB"><meta property="og:image" content="https://images.unsplash.com/photo-1555066931-4365d14bab8c"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="twitter:card" content="/assets/images/RecursiveZero-White.jpg"><meta property="twitter:url" content="https://recursivezero.com/blogs/state-management/"><meta property="twitter:title" content="The new era of state management with Zustand ?"><meta property="twitter:description" content="The simple and easy to understand all about Zustand the new and simple way to manage the state in client side. "><meta property="twitter:image" content="https://images.unsplash.com/photo-1555066931-4365d14bab8c"><link rel="sitemap" href="/sitemap-index.xml"><link rel="alternate" type="application/rss+xml" title="recursivezero.com" href="/rss.xml"><meta name="generator" content="Astro v5.1.1"><title>The new era of state management with Zustand ?</title><style>.markdown-content{font-size:1.125rem;line-height:1.75;color:#e5e7eb;background-color:#00000080;padding:3rem 6rem;border-radius:1rem}.markdown-content h1{margin-bottom:2rem;font-size:2.25rem;font-weight:700;letter-spacing:-.025em;background:linear-gradient(120deg,#75aac3,#8fb5b9);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 2px 10px rgba(139,92,246,.2)}.markdown-content h2{margin-bottom:1.5rem;margin-top:3rem;font-size:1.5rem;font-weight:600;background:linear-gradient(120deg,#75aac3,#8fb5b9);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 2px 8px rgba(167,139,250,.2)}.markdown-content h3{margin-bottom:1rem;margin-top:2rem;font-size:1.25rem;font-weight:600;background:linear-gradient(120deg,#75aac3,#8fb5b9);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 2px 6px rgba(196,181,253,.2)}.markdown-content p{margin-bottom:1.5rem;line-height:1.75;color:#d1d5db}.markdown-content ul{margin-bottom:1.5rem;list-style-type:disc;padding-left:1.5rem}.markdown-content ol{margin-bottom:1.5rem;list-style-type:decimal;padding-left:1.5rem}.markdown-content li{margin-bottom:.5rem}.markdown-content a{color:#60a5fa;text-decoration:underline}.markdown-content a:hover{color:#93c5fd}.markdown-content img{margin-top:2rem;margin-bottom:2rem;border-radius:.5rem;box-shadow:0 10px 15px -3px #0000001a}.markdown-content pre{margin-top:1.5rem;margin-bottom:1.5rem;overflow-x:auto;border-radius:.75rem;background-color:#1f293780;padding:1rem}.markdown-content code{border-radius:.25rem;padding:.125rem .375rem;font-size:.875rem;color:#e5e7eb}.markdown-content blockquote{border-left:4px solid rgb(75,85,99);padding-left:1rem;font-style:italic;color:#9ca3af}
+</style>
+<link rel="stylesheet" href="/_astro/about.BuMdq4Rt.css">
+<style>[data-astro-image]{width:100%;height:auto;object-fit:var(--fit);object-position:var(--pos);aspect-ratio:var(--w) / var(--h)}[data-astro-image=responsive]{max-width:calc(var(--w) * 1px);max-height:calc(var(--h) * 1px)}[data-astro-image=fixed]{width:calc(var(--w) * 1px);height:calc(var(--h) * 1px)}
+</style><script type="module" src="/_astro/page.V2R8AmkL.js"></script></head> <body id="pageBody"> <!--<ThemeProvider />--> <header> <div class="nav-container w-full"> <nav class=""> <div class="mx-5 flex w-full items-center justify-between"> <h1 class="text-[1.05rem] font-bold leading-[-0.03em] lg:text-[1.2rem]"> <a href="/" class="flex items-center gap-[0.5rem] lg:flex-row"> <picture> <source srcset="/_astro/RecursiveZero-White.DLnB3bUA_12iLri.png" type="image/png"><source srcset="/_astro/RecursiveZero-White.DLnB3bUA_12iLri.png" type="image/jpeg"><source srcset="/_astro/RecursiveZero-White.DLnB3bUA_12iLri.png" type="image/jpeg"><source srcset="/_astro/RecursiveZero-White.DLnB3bUA_12iLri.png" type="image/webp">  <img src="/_astro/RecursiveZero-White.DLnB3bUA_12iLri.png" alt="logo" width="1570" height="848" loading="lazy" decoding="async" class="w-[180px] lg:w-[250px]"> </picture>
+Recursive Zero : A gupt startup
+</a> </h1> <ul class="menu-list flex items-center gap-[1.5rem] lg:flex-row-reverse"> <li id="themeToggle"> <button class="sunBtn"> <i class="fa fa-sun-o" aria-hidden="true">Light</i> </button> <button class="moonBtn hidden"> <i class="fa fa-moon-o" aria-hidden="true">Dark</i> </button> </li> <li id="menuToggle" class="menu-button lg:hidden"> <button id="closeBtn" class="ml-[3px] hidden"> <i class="fa fa-times" aria-hidden="true"></i> </button> <button id="openBtn"> <i class="fa fa-bars" aria-hidden="true"></i> </button> </li> <!-- desktop menu --> <a href=""> <button class="yellowBtnHover rounded-md bg-[#FFCC00] px-[10px] py-[5px] text-[#111]">
+Start Saving Time!
+</button> </a> </ul> </div> </nav> <!-- mobile nav-overlay --> <div id="menu-open" class="nav-overlay hidden h-dvh pt-[20px] lg:hidden"> <div class="pt-[10px]"> <div class="flex flex-col items-center justify-between gap-[20px] py-[20px] text-[14px] leading-[22.4px] md:text-[16px] md:leading-[25.6px]"> <a href="" class="w-full"> <button class="h-[35px] w-full rounded-md bg-[#FFCC00] px-[10px] py-[5px] text-[#111]">
+Start Saving Time!
+</button> </a> </div> </div> </div> </div> </header> <!--</header>--> <script type="module">const o=document.querySelector("#menuToggle");o.addEventListener("click",()=>{const e=document.querySelector("#menu-open"),n=document.querySelector("#openBtn"),l=document.querySelector("#closeBtn");e.style.display==="block"?(e.style.display="none",l.style.display="none",n.style.display="inline"):(e.style.display="block",l.style.display="inline",n.style.display="none")});</script> <main id="main" class="main"> <div class="sidebar"><button popovertarget="nav" popovertargetaction="toggle"> <svg viewBox="0 0 100 80" role="img" fill="current" width="24" height="24">
+  <title>Hamburger Menu</title>
+  <symbol id="line">
+    <rect width="100" height="20" fill="currentColor"></rect>
+  </symbol>
+  <use xlink:href="#line" y="0" />
+  <use xlink:href="#line" y="30" />
+  <use xlink:href="#line" y="60" />
+</svg> </button> <div class="layout"> <aside popover="auto" id="nav"> <button popovertarget="nav" popovertargetaction="hide" class="hider" aria-label="Close drawer"> <span class="sr-only">Close drawer</span> </button> <nav class="nav"> <ul class="nav--list"> <li class="nav--list__item"> <a class="link" href="/" aria-label="Home"> <span>Home</span> </a> </li><li class="nav--list__item"> <a class="link" href="/about" aria-label="About"> <span>About</span> </a> </li><li class="nav--list__item"> <a class="link" href="/blogs" aria-label="Blogs"> <span>Blogs</span> </a> </li><li class="nav--list__item"> <a class="link" href="/career" aria-label="Career"> <span>Career</span> </a> </li><li class="nav--list__item"> <a class="link" href="/work" aria-label="Work"> <span>Work</span> </a> </li> </ul> </nav> <div class="actions"> <button class="theme-toggle"> <svg viewBox="0 0 100 100" role="img" width="24" height="24"><!-- System Icon -->
+  <symbol id="icon-system" viewBox="0 0 24 24">
+    <path fill="green" fill-rule="evenodd" clip-rule="evenodd" d="M2.25 5.25a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3V15a3 3 0 0 1-3 3h-3v.257c0 .597.237 1.17.659 1.591l.621.622a.75.75 0 0 1-.53 1.28h-9a.75.75 0 0 1-.53-1.28l.621-.622a2.25 2.25 0 0 0 .659-1.59V18h-3a3 3 0 0 1-3-3V5.25Zm1.5 0v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5Z">
+    </path>
+    <title>System</title>
+  </symbol><!-- Sun Icon -->
+  <symbol id="icon-sun" viewBox="0 0 24 24">
+    <path ="" d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z">
+    </path>
+    <title>Sun</title>
+  </symbol><!-- Moon Icon -->
+  <symbol id="icon-moon" viewBox="0 0 24 24">
+    <path fill="silver" fill-rule="evenodd" clip-rule="evenodd" d="M9.528 1.718a.75.75 0 0 1 .162.819A8.97 8.97 0 0 0 9 6a9 9 0 0 0 9 9 8.97 8.97 0 0 0 3.463-.69.75.75 0 0 1 .981.98 10.503 10.503 0 0 1-9.694 6.46c-5.799 0-10.5-4.7-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 0 1 .818.162Z">
+    </path>
+    <title>Moon</title>
+  </symbol>
+  <svg width="100" height="100" fill="currentColor">
+    <use href="#icon-system"></use>
+  </svg>
+  <svg width="100" height="100" fill="currentColor">
+    <use href="#icon-sun"></use>
+  </svg>
+  <svg width="100" height="100" fill="currentColor">
+    <use href="#icon-moon"></use>
+  </svg>
+</svg> </button> <button class="placement-toggle"> <svg viewBox="0 0 24 24" role="img"  fill="none" stroke-width="1.5" stroke="currentColor" width="24" height="24">
+  <title>Arrow</title>
+  <path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"></path>
+</svg> </button> </div> </aside> </div> <script type="module">const e=document.querySelector("#nav"),m=document.querySelector(".theme-toggle"),s=document.querySelector(".placement-toggle"),d=document.querySelector(".hider"),c={theme:"system"},r=["system","light","dark"];let t;document.documentElement.dataset.resizing=String(!1);document.documentElement.dataset.theme="system";document.documentElement.dataset.placement="top";window.addEventListener("resize",()=>{e.matches(":popover-open")&&e.hidePopover(),document.documentElement.dataset.resizing=String(!0),t&&clearTimeout(t),t=setTimeout(()=>{document.documentElement.dataset.resizing=String(!1)},200)});const a=()=>{document.documentElement.dataset.placement=document.documentElement.dataset.placement==="top"?"bottom":"top"};s.addEventListener("click",a);let o=0;const i=()=>{o+=1,c.theme=r[o%3],u()};m.addEventListener("click",i);const n=()=>{document.documentElement.dataset.theme=c.theme},u=()=>{if(!document.startViewTransition)return n();document.startViewTransition(()=>n())};n();d.removeAttribute("popovertargetaction");const l=()=>{document.documentElement.dataset.complete=String(!1),document.documentElement.style.setProperty("--complete","0"),e.style.setProperty("--ty","0")};e.addEventListener("toggle",l);</script></div> <div class="content">  <div class="mx-auto flex max-w-6xl flex-col items-center justify-center px-4 sm:px-6 lg:px-8"> <h1 class="mb-4 text-4xl font-bold text-white">The new era of state management with Zustand ?</h1> <p class="mb-6 text-xl text-gray-300">The simple and easy to understand all about Zustand the new and simple way to manage the state in client side. </p> <div class="mb-8 flex items-center gap-4 text-gray-400">  <span class="flex items-center gap-2"> <svg viewBox="0 0 20 20" role="img" class="h-5 w-5" fill="currentColor">
+  <path ="" fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" />
+</svg> <time datetime="2024-12-12T00:00:00.000Z">12/12/2024</time> </span> </div> <div class="markdown-content">  <h2 id="zustand-documentation">Zustand Documentation</h2>
+<h2 id="what-is-zustand">What is Zustand?</h2>
+<p>Zustand is a small, fast, and flexible state management library for React. It allows you to manage global state with minimal setup, using React hooks to access and modify the state directly within your components.</p>
+<hr>
+<h2 id="how-zustand-is-used-in-this-project">How Zustand is Used in This Project</h2>
+<p>In this project, Zustand is used to manage the search state across the application. This includes handling the user’s search query, selected category, price range, sorting options, and rating filters.</p>
+<hr>
+<h2 id="creating-the-store">Creating the Store</h2>
+<p>We create a Zustand store using the <code>create</code> function. The store manages various pieces of state related to search functionality, such as the search query, category, price range, sort options, and ratings.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="ts"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { create } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> "zustand"</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">interface</span><span style="color:#B392F0"> SearchStore</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#FFAB70">  searchQuery</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> string</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#FFAB70">  selectCategory</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> string</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#FFAB70">  priceRange</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> string</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#FFAB70">  selectSortOption</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> string</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#FFAB70">  selectRating</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> string</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">  setSearchQuery</span><span style="color:#F97583">:</span><span style="color:#E1E4E8"> (</span><span style="color:#FFAB70">query</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> string</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=></span><span style="color:#79B8FF"> void</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#B392F0">  setSelectCategory</span><span style="color:#F97583">:</span><span style="color:#E1E4E8"> (</span><span style="color:#FFAB70">category</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> string</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=></span><span style="color:#79B8FF"> void</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#B392F0">  setPriceRange</span><span style="color:#F97583">:</span><span style="color:#E1E4E8"> (</span><span style="color:#FFAB70">range</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> string</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=></span><span style="color:#79B8FF"> void</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#B392F0">  setSelectSortOption</span><span style="color:#F97583">:</span><span style="color:#E1E4E8"> (</span><span style="color:#FFAB70">option</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> string</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=></span><span style="color:#79B8FF"> void</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#B392F0">  setSelectRating</span><span style="color:#F97583">:</span><span style="color:#E1E4E8"> (</span><span style="color:#FFAB70">rating</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> string</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=></span><span style="color:#79B8FF"> void</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> useSearchStore</span><span style="color:#F97583"> =</span><span style="color:#B392F0"> create</span><span style="color:#E1E4E8">&#x3C;</span><span style="color:#B392F0">SearchStore</span><span style="color:#E1E4E8">>((</span><span style="color:#FFAB70">set</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=></span><span style="color:#E1E4E8"> ({</span></span>
+<span class="line"><span style="color:#E1E4E8">  searchQuery: </span><span style="color:#9ECBFF">""</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">  selectCategory: </span><span style="color:#9ECBFF">""</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">  priceRange: </span><span style="color:#9ECBFF">""</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">  selectSortOption: </span><span style="color:#9ECBFF">""</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">  selectRating: </span><span style="color:#9ECBFF">""</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">  setSearchQuery</span><span style="color:#E1E4E8">: (</span><span style="color:#FFAB70">query</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=></span><span style="color:#B392F0"> set</span><span style="color:#E1E4E8">({ searchQuery: query }),</span></span>
+<span class="line"><span style="color:#B392F0">  setSelectCategory</span><span style="color:#E1E4E8">: (</span><span style="color:#FFAB70">category</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=></span><span style="color:#B392F0"> set</span><span style="color:#E1E4E8">({ selectCategory: category }),</span></span>
+<span class="line"><span style="color:#B392F0">  setPriceRange</span><span style="color:#E1E4E8">: (</span><span style="color:#FFAB70">range</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=></span><span style="color:#B392F0"> set</span><span style="color:#E1E4E8">({ priceRange: range }),</span></span>
+<span class="line"><span style="color:#B392F0">  setSelectSortOption</span><span style="color:#E1E4E8">: (</span><span style="color:#FFAB70">option</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=></span><span style="color:#B392F0"> set</span><span style="color:#E1E4E8">({ selectSortOption: option }),</span></span>
+<span class="line"><span style="color:#B392F0">  setSelectRating</span><span style="color:#E1E4E8">: (</span><span style="color:#FFAB70">rating</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=></span><span style="color:#B392F0"> set</span><span style="color:#E1E4E8">({ selectRating: rating })</span></span>
+<span class="line"><span style="color:#E1E4E8">}));</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">export</span><span style="color:#F97583"> default</span><span style="color:#E1E4E8"> useSearchStore;</span></span></code></pre>
+<h4 id="store-state-and-actions">Store State and Actions</h4>
+<ul>
+<li>
+<p><strong>State Variables:</strong></p>
+<ul>
+<li>searchQuery: The current search query input by the user.</li>
+<li>selectCategory: The category filter selected by the user.</li>
+<li>priceRange: The price range filter.</li>
+<li>selectSortOption: The sort option applied to the search results.</li>
+<li>selectRating: The rating filter applied to the results.</li>
+</ul>
+</li>
+<li>
+<p><strong>Actions (Setters):</strong></p>
+<ul>
+<li>setSearchQuery(query): Updates the search query.</li>
+<li>setSelectCategory(category): Updates the selected category.</li>
+<li>setPriceRange(range): Updates the price range.</li>
+<li>setSelectSortOption(option): Updates the sorting option.</li>
+<li>setSelectRating(rating): Updates the selected rating.</li>
+</ul>
+</li>
+</ul>
+<h4 id="accessing-the-store-in-components">Accessing the Store in Components</h4>
+<p>To use Zustand state and actions in your React components, you use the useSearchStore hook.</p>
+<p><strong>Example: Search Input Component</strong>
+The SearchInput component allows users to input a search query. It uses the global searchQuery from the store and updates it with setSearchQuery:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="ts"><code><span class="line"><span style="color:#F97583">const</span><span style="color:#B392F0"> SearchInput</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> () </span><span style="color:#F97583">=></span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">  const</span><span style="color:#E1E4E8"> { </span><span style="color:#79B8FF">searchQuery</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">setSearchQuery</span><span style="color:#E1E4E8"> } </span><span style="color:#F97583">=</span><span style="color:#B392F0"> useSearchStore</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">  return</span><span style="color:#E1E4E8"> (</span></span>
+<span class="line"><span style="color:#F97583">    &#x3C;</span><span style="color:#FFAB70">Input</span></span>
+<span class="line"><span style="color:#E1E4E8">      type</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"search"</span></span>
+<span class="line"><span style="color:#E1E4E8">      value</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">{searchQuery}</span></span>
+<span class="line"><span style="color:#E1E4E8">      onChange</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">{(e) => </span><span style="color:#B392F0">setSearchQuery</span><span style="color:#E1E4E8">(e.target.value)}</span></span>
+<span class="line"><span style="color:#E1E4E8">      placeholder</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"Search..."</span></span>
+<span class="line"><span style="color:#E1E4E8">      className</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"search-input"</span></span>
+<span class="line"><span style="color:#F97583">    /></span></span>
+<span class="line"><span style="color:#E1E4E8">  );</span></span>
+<span class="line"><span style="color:#E1E4E8">};</span></span></code></pre>  </div> </div>  </div> </main> <footer> <div class="h-[1px] w-full bg-white/70"></div> <div class="p-[20px] lg:py-[50px]"> <div class="mx-auto flex max-w-[100rem] flex-row items-center justify-between"> <div class="footer-bottom mb-[30px] lg:mb-[40px] lg:pt-[20px]"> <div> <p class="footerBottomA text-[12.5px] leading-[20px] text-[#999]">
+©2025
+<a href="/" class="footerBottomB text-[#fff]"> <strong> RecursiveZero Private Limited</strong> </a>
+| All Rights Reserved |
+<a href="/terms" class="hover:text-white">Terms & Conditions</a> |
+<a href="/privacy" class="hover:text-white">Privacy Policy</a> </p> </div> </div> <div class="footer-top justify-between border-b border-[#222] pb-[30px] lg:flex lg:pb-[10px]"> <div class="footer-links flex justify-end"> <ul class="flex gap-[0.62rem] font-bold"> <li> <a href="https://www.twitter.com/recursivezero" target="_blank" class="social-link inline-flex size-[40px] items-center justify-center rounded-[5px]">
+X
+</a> </li> <li> <a href="mailto:recursivezero@outlook.com" class="social-link inline-flex size-[40px] items-center justify-center rounded-[5px]">
+M
+</a> </li> <li> <a href="https://www.github.com/recursivezero" target="_blank" class="social-link inline-flex size-[40px] items-center justify-center rounded-[5px]">
+G
+</a> </li> </ul> </div> </div> </div> </div> </footer> <script type="module">function t(s){s.classList.contains("darkBg")?(s.classList.remove("darkBg"),s.classList.add("lightBg")):s.classList.contains("lightBg")&&(s.classList.remove("lightBg"),s.classList.add("darkBg"))}const c=document.querySelector("#themeToggle"),o=document.querySelector("body");c?.addEventListener("click",()=>{console.log("clicked"),t(o)});</script> </body> </html>

@@ -59,7 +59,7 @@
     "editor.inlayHints.enabled": "offUnlessPressed",
     "editor.insertSpaces": true,
     "editor.linkedEditing": true,
-    "editor.minimap.enabled": false,
+    "editor.minimap.enabled": true,
     "editor.minimap.renderCharacters": false,
     "editor.minimap.size": "fill",
     "editor.multiCursorModifier": "alt",
