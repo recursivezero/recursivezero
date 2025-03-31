@@ -1,0 +1,70 @@
+@layer normalize, base, demo, inversion;
+
+@layer inversion {
+
+  /* ::before === clouds, ::after === stars */
+  @media (prefers-color-scheme: light) {
+
+    [data-invert='true']::after,
+    [data-invert='false']::before {
+      opacity: 1;
+    }
+
+    [data-invert='true']::before,
+    [data-invert='false']::after {
+      opacity: 0.1;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+
+    [data-invert='true']::before,
+    [data-invert='false']::after {
+      opacity: 1;
+      background-position: 0% 50%;
+    }
+
+    [data-invert='true']::after,
+    [data-invert='false']::before {
+      opacity: 0;
+    }
+  }
+
+  [data-invert='true'][data-theme='light']::before {
+    opacity: 0.1;
+    background-position: 50% 50%;
+  }
+
+  [data-invert='true'][data-theme='dark']::before {
+    opacity: 1;
+    background-position: 0% 50%;
+  }
+
+  [data-invert='true'][data-theme='light']::after,
+  [data-invert='false'][data-theme='dark']::after {
+    opacity: 1;
+  }
+
+  [data-invert='false'][data-theme='light']::after,
+  [data-invert='true'][data-theme='dark']::after {
+    opacity: 0;
+  }
+
+  [data-invert='false'][data-theme='light']::before {
+    opacity: 1;
+    background-position: 50% 50%;
+  }
+
+  [data-invert='false'][data-theme='dark']::before {
+    opacity: 0.1;
+    background-position: 0% 50%;
+  }
+
+  [data-invert='true'] {
+    background: light-dark(#01022e, #34d0ff);
+  }
+
+  [data-invert='false'] {
+    background: light-dark(#34d0ff, #01022e);
+  }
+}

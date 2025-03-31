@@ -7,7 +7,7 @@ const slicedPosts = posts.slice(0, 3);
 
 <section>
   <div id="featuresSection" class="p-[20px] lg:py-[50px]">
-    <div class="mx-auto max-w-[60rem]">
+    <div class="mx-auto">
       <div class="section-header mb-[20px]">
         <h2
           class="text-[27px] font-bold leading-[32.8px] tracking-[-0.54px] md:text-[31.2px] md:leading-[37.5px] md:tracking-[-0.62px]"
@@ -19,7 +19,7 @@ const slicedPosts = posts.slice(0, 3);
         {
           slicedPosts.map((post) => (
             <BlogCard
-              url={`/feature/${post.slug}` || "/404"}
+              url={`/blogs/${post.slug}` || "/404"}
               title={post.data.title}
               description={post.data.description}
               image={post.data.image}

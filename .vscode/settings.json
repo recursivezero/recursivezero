@@ -20,5 +20,15 @@
     "sideBar.border": "#20e9d2",
     "tab.activeBorder": "#20e9d2"
   },
-  "peacock.color": "#13c3af"
+  "peacock.color": "#13c3af",
+  "files.exclude": {
+    "**/.git": false,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "node_modules/**": true
+  },
+  "explorerExclude.backup": {}
 }

@@ -4,12 +4,12 @@ import { Picture } from "astro:assets";
 import "@/assets/styles/header.css";
 import ThemeToggle from "@/components/ThemeToggle.astro";
 import { APP_NAME } from "@/utils/constants";
-import logoImage from "/public/assets/images/zero.png";
+import logoImage from "/public/assets/images/RecursiveZero-Black.jpg";
 ---
 
 <div class="container__header">
   <div class="header__brand">
-    <Picture src={logoImage} formats={["png", "webp"]} alt="template logo" class="logo" />
+    <Picture src={logoImage} formats={["png", "jpg", "webp"]} alt="logo" class="logo" />
     <span title={APP_NAME}>{APP_NAME}</span>
   </div>
   <ThemeToggle />

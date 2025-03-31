@@ -1,12 +1,11 @@
-import { defineCollection, z } from "astro:content";
-
 import { glob } from "astro/loaders";
+import { defineCollection, z } from "astro:content";
 
 export const collections = {
   articles: defineCollection({
     loader: glob({ pattern: "**/*.md", base: "./src/content/article" }),
     schema: z.object({
-      title: z.string(),
+      // Removed loader as 'glob' is not a valid export from 'astro:content'
       author: z.string(),
       description: z.string().optional(),
       date: z.date().optional()

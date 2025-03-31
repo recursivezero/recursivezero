@@ -72,9 +72,25 @@
       "javascript": "javascriptreact"
     },
     "eslint.options": {
-      "extensions": [".js", ".jsx", ".md", ".mdx", ".ts", ".tsx", ".astro"]
+      "extensions": [
+        ".js",
+        ".jsx",
+        ".md",
+        ".mdx",
+        ".ts",
+        ".tsx",
+        ".astro"
+      ]
     },
-    "eslint.validate": ["mdx", "markdown", "javascript", "javascriptreact", "typescript", "typescriptreact", "astro"],
+    "eslint.validate": [
+      "mdx",
+      "markdown",
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact",
+      "astro"
+    ],
     "explorer.compactFolders": false,
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
@@ -98,14 +114,23 @@
     "files.autoSave": "onFocusChange",
     "files.eol": "\r\n",
     "files.exclude": {
-      ".git/**": true
+      "**/.DS_Store": true,
+      "**/.git": false,
+      "**/.hg": true,
+      "**/.svn": true,
+      "**/CVS": true,
+      "**/Thumbs.db": true,
+      "node_modules/**": true
     },
     "files.readonlyExclude": {
       "dist/**": true
     },
     "git.autofetch": true,
     "git.branchPrefix": "feature/",
-    "git.branchProtection": ["develop", "main"],
+    "git.branchProtection": [
+      "develop",
+      "main"
+    ],
     "git.branchRandomName.enable": true,
     "git.confirmSync": false,
     "git.enableCommitSigning": false,
@@ -116,7 +141,9 @@
     "js/ts.implicitProjectConfig.checkJs": true,
     "peacock.affectSideBarBorder": true,
     "peacock.color": "#010010",
-    "prettier.documentSelectors": ["**/*.astro"],
+    "prettier.documentSelectors": [
+      "**/*.astro"
+    ],
     "prettier.printWidth": 120,
     "prettier.quoteProps": "consistent",
     "prettier.singleQuote": false,
@@ -164,6 +191,6 @@
       "titleBar.inactiveBackground": "#01001099",
       "titleBar.inactiveForeground": "#e7e7e799",
       "tab.activeBorder": "#040043"
-    }
+    },
   }
 }

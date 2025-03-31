@@ -8,7 +8,7 @@ const { title, description, ogImage, articleDate } = Astro.props;
 const titleSeparator = "•";
 const siteTitle = `${title} ${titleSeparator} ${siteConfig.title}`;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const socialImageURL = new URL(ogImage ? ogImage : "/profile-placeholder.jpg", Astro.url).href;
+const socialImageURL = new URL(ogImage ? ogImage : "/assets/images/RecursiveZero-White.jpg", Astro.url).href;
 ---
 
 <meta charset="utf-8" />
@@ -17,10 +17,10 @@ const socialImageURL = new URL(ogImage ? ogImage : "/profile-placeholder.jpg", A
 <title>{siteTitle}</title>
 
 {/* Icons / Favicon */}
-<link rel="icon" href="/favicon-48x48.png" type="image/png" sizes="48x48" />
-<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-<link rel="shortcut icon" href="/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="icon" href="/assets/images/favicon-32x32.png" type="image/png" sizes="32x32" />
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml" />
+<link rel="shortcut icon" href="/assets/images/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png" />
 <link rel="manifest" href="/manifest.webmanifest" />
 <link rel="canonical" href={canonicalURL} />
 
@@ -53,7 +53,7 @@ const socialImageURL = new URL(ogImage ? ogImage : "/profile-placeholder.jpg", A
 }
 
 {/* Twitter */}
-<meta property="twitter:card" content="/profile-placeholder.jpg" />
+<meta property="twitter:card" content="/assets/images/RecursiveZero-White.jpg" />
 <meta property="twitter:url" content={canonicalURL} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />

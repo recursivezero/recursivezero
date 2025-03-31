@@ -1,6 +1,5 @@
 ---
 import { siteConfig } from "@/site.config";
-
 import "@/assets/styles/globals.css";
 
 //components
@@ -8,6 +7,7 @@ import BaseHead from "@/layouts/BaseHead";
 import Header from "@/components/Header.astro";
 import Menu from "./common/Menu.astro";
 import Footer from "@/components/Footer.astro";
+import ThemeProvider from "@/components/ThemeProvider.astro";
 
 const {
   meta: { title, description = siteConfig.description, ogImage, articleDate }
@@ -21,7 +21,6 @@ const {
   </head>
   <body id="pageBody">
     <!--<ThemeProvider />-->
-    <header class="h-10"></header>
     <Header />
     <main id="main" class="main">
       <div class="sidebar"><Menu /></div>
@@ -43,6 +42,7 @@ const {
       const themeToggle = document.querySelector("#themeToggle");
       const bodyPart = document.querySelector("body") as HTMLBodyElement;
       themeToggle?.addEventListener("click", () => {
+        console.log("clicked");
         toggleStyle(bodyPart);
       });
     </script>

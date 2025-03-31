@@ -15,6 +15,7 @@
     --accent-light: 224, 204, 250;
     --accent-dark: 49, 10, 101;
     --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
+    --background: light-dark(blue, yellow);
   }
 
   html {
@@ -46,12 +47,9 @@
     container-name: thread;
     box-sizing: border-box;
     min-height: 100vh;
-    font-family: "Roboto", "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif,
-      system-ui;
-
+    font-family: "Roboto", "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, system-ui;
     padding-left: clamp(1rem, 5vw, 10rem);
     padding-right: clamp(1rem, 5vw, 10rem);
-    font-family: "Livvic", sans-serif;
     transition: background-color 0.3s ease;
   }
 
@@ -125,7 +123,7 @@
     outline: 1px solid greenyellow;
   }
 
-  .whiteBg {
+  /*.whiteBg {
     background-color: #eee;
     color: #111;
   }
@@ -133,7 +131,7 @@
   .darkBg {
     background-color: #222;
     color: #fff;
-  }
+  }*/
 
   textarea {
     resize: none;

@@ -1,7 +1,7 @@
 ---
 name: Question
 about: Please ask any question about the project
-title: "[❓]: "
+title: "❓: "
 labels: ["question"]
 assignees: recursivezero
 ---
