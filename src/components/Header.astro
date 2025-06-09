@@ -13,20 +13,24 @@ import logoImage from "/public/assets/images/RecursiveZero-White.jpg";
               src={logoImage}
               formats={["png", "jpeg", "jpg", "webp"]}
               alt="logo"
-              class="w-[180px] lg:w-[250px]"
+              class="clipped-logo w-[180px] lg:w-[250px]"
+              loading="eager"
+              id="clipped-logo"
+              aria-label={"RecursiveZero Logo"}
+              title={"RecursiveZero Logo"}
             />
-            Recursive Zero : A gupt startup
+            A gupt startup
           </a>
         </h1>
         <ul class="menu-list flex items-center gap-[1.5rem] lg:flex-row-reverse">
-          <li id="themeToggle">
+          <!--<li id="themeToggle">
             <button class="sunBtn">
               <i class="fa fa-sun-o" aria-hidden="true">Light</i>
             </button>
             <button class="moonBtn hidden">
               <i class="fa fa-moon-o" aria-hidden="true">Dark</i>
             </button>
-          </li>
+          </li>-->
           <li id="menuToggle" class="menu-button lg:hidden">
             <button id="closeBtn" class="ml-[3px] hidden">
               <i class="fa fa-times" aria-hidden="true"></i>
@@ -36,10 +40,8 @@ import logoImage from "/public/assets/images/RecursiveZero-White.jpg";
             </button>
           </li>
           <!-- desktop menu -->
-          <a href="">
-            <button class="yellowBtnHover rounded-md bg-[#FFCC00] px-[10px] py-[5px] text-[#111]">
-              Start Saving Time!
-            </button>
+          <a href="/career">
+            <button class="yellowBtnHover rounded-md bg-[#FFCC00] px-[10px] py-[5px] text-[#111]"> Join us! </button>
           </a>
         </ul>
       </div>
@@ -51,9 +53,7 @@ import logoImage from "/public/assets/images/RecursiveZero-White.jpg";
           class="flex flex-col items-center justify-between gap-[20px] py-[20px] text-[14px] leading-[22.4px] md:text-[16px] md:leading-[25.6px]"
         >
           <a href="" class="w-full">
-            <button class="h-[35px] w-full rounded-md bg-[#FFCC00] px-[10px] py-[5px] text-[#111]">
-              Start Saving Time!
-            </button>
+            <button class="h-[35px] w-full rounded-md bg-[#FFCC00] px-[10px] py-[5px] text-[#111]"> Join us! </button>
           </a>
         </div>
       </div>

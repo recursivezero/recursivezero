@@ -146,3 +146,9 @@
     background-color: #b89405;
   }
 }
+
+#clipped-logo {
+  position: relative;
+  -webkit-clip-path: inset(30px 10px 30px 10px);
+  clip-path: inset(30px 10px 30px 10px);
+}
