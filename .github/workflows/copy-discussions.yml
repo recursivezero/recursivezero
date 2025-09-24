@@ -31,14 +31,25 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const {
-              discussion_number,
-              source_owner,
-              source_repo,
-              target_owner,
-              target_repo,
-              target_category_id
-            } = inputs;
+            const core = require('@actions/core');
+
+            // Get workflow inputs
+            const discussion_number = core.getInput('discussion_number');
+            const source_owner = core.getInput('source_owner');
+            const source_repo = core.getInput('source_repo');
+            const target_owner = core.getInput('target_owner');
+            const target_repo = core.getInput('target_repo');
+            const target_category_id = core.getInput('target_category_id');
+
+            // Log inputs for verification
+            console.log('--- Workflow Inputs ---');
+            console.log('discussion_number:', discussion_number);
+            console.log('source_owner:', source_owner);
+            console.log('source_repo:', source_repo);
+            console.log('target_owner:', target_owner);
+            console.log('target_repo:', target_repo);
+            console.log('target_category_id:', target_category_id);
+            console.log('------------------------');
 
             // Fetch source discussion
             const sourceDiscussion = await github.rest.discussions.get({
