@@ -1,0 +1,108 @@
+name: Copy or Update Discussion
+
+on:
+  workflow_dispatch:
+    inputs:
+      discussion_number:
+        description: 'Source discussion number'
+        required: true
+      source_owner:
+        description: 'Owner of source repo'
+        required: true
+      source_repo:
+        description: 'Source repository'
+        required: true
+      target_owner:
+        description: 'Owner of target repo'
+        required: true
+      target_repo:
+        description: 'Target repository'
+        required: true
+      target_category_id:
+        description: 'Category ID of target discussion'
+        required: true
+
+jobs:
+  copy-or-update-discussion:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Copy or Update Discussion
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const {
+              discussion_number,
+              source_owner,
+              source_repo,
+              target_owner,
+              target_repo,
+              target_category_id
+            } = inputs;
+
+            // Fetch source discussion
+            const sourceDiscussion = await github.rest.discussions.get({
+              owner: source_owner,
+              repo: source_repo,
+              discussion_number: parseInt(discussion_number)
+            });
+
+            // List discussions in target category
+            const discussions = await github.paginate(
+              github.rest.discussions.list,
+              {
+                owner: target_owner,
+                repo: target_repo,
+                category: parseInt(target_category_id),
+                per_page: 100
+              }
+            );
+
+            // Check if discussion with same title exists
+            let targetDiscussion = discussions.find(d => d.title === sourceDiscussion.data.title);
+
+            if (targetDiscussion) {
+              // Update existing discussion
+              await github.rest.discussions.update({
+                owner: target_owner,
+                repo: target_repo,
+                discussion_number: targetDiscussion.number,
+                title: sourceDiscussion.data.title,
+                body: sourceDiscussion.data.body
+              });
+              console.log(`Updated discussion #${targetDiscussion.number} in target repo.`);
+            } else {
+              // Create new discussion
+              targetDiscussion = await github.rest.discussions.create({
+                owner: target_owner,
+                repo: target_repo,
+                title: sourceDiscussion.data.title,
+                body: sourceDiscussion.data.body,
+                category_id: parseInt(target_category_id)
+              });
+              targetDiscussion = targetDiscussion.data;
+              console.log(`Created new discussion #${targetDiscussion.number} in target repo.`);
+            }
+
+            // Fetch all comments from source discussion
+            const comments = await github.paginate(
+              github.rest.discussions.listComments,
+              {
+                owner: source_owner,
+                repo: source_repo,
+                discussion_number: parseInt(discussion_number),
+                per_page: 100
+              }
+            );
+
+            // Copy comments to target discussion
+            for (const comment of comments) {
+              await github.rest.discussions.createComment({
+                owner: target_owner,
+                repo: target_repo,
+                discussion_number: targetDiscussion.number,
+                body: `**${comment.user.login} commented:**\n\n${comment.body}`
+              });
+            }
+
+            console.log(`Copied ${comments.length} comments.`);
