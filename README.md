@@ -21,7 +21,9 @@ Building scalable, production-ready web applications and exploring the frontiers
   * **[ABCD KBD](https://abcdkbd.com):** An interactive learning platform for toddlers, rooted in the Indian cultural system and designed for early childhood development.
   * **[Tech Taboo](https://recursivezero.github.io/taboo/):** An interactive meetup game built with Alpine.js and Astro.
   * **[Tiny URL](https://rzro.link):** A high-performance URL shortener using Python and Fast API.
-  * **[Threadzip](https://lab.threadzip.com):** An AI Chatbot for fabric and raw material industry.
+  * **[Threadzip App](https://app.threadzip.com):** A B2B Marketplace for raw material fabric industry.
+  * **[Threadzip Pro](https://pro.threadzip.com):** An AI Chatbot for fabric industry.
+  * **[Threadzip Lab](https://lab.threadzip.com):** An Fabric Analysis and Pattern Generation Tool using AI.
   * **[Action-Club](https://github.com/recursivezero/action-club):** A collection of reusable GitHub Actions for rapid project scaffolding.
 
 -----
