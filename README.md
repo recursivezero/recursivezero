@@ -1,8 +1,6 @@
 
 # 🚀 Hello, I'm Founder of RecursiveZero
 
-### **Full-Stack Engineer & AI Enthusiast**
-
 Building scalable, production-ready web applications and exploring the frontiers of Computer Vision and Image Processing. We focus on clean architecture, minimal technical debt, and high-performance deployments.
 
 -----
