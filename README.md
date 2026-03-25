@@ -24,6 +24,7 @@ Building scalable, production-ready web applications and exploring the frontiers
   * **[Threadzip App](https://app.threadzip.com):** A B2B Marketplace for raw material fabric industry.
   * **[Threadzip Pro](https://pro.threadzip.com):** An AI Chatbot for fabric industry.
   * **[Threadzip Lab](https://lab.threadzip.com):** An Fabric Analysis and Pattern Generation Tool using AI.
+  * **[RZ-Sample: Python Package](https://pypi.org/project/rz-sample/):** production-ready Streamlit, FastAPI, and Poetry boilerplate to accelerate building and deploying modern data apps.
   * **[Action-Club](https://github.com/recursivezero/action-club):** A collection of reusable GitHub Actions for rapid project scaffolding.
 
 -----
