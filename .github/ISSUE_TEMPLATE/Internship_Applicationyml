@@ -1,0 +1,59 @@
+name: 🚀 Internship Application
+description: Apply for the Front-End or Back-End/AI Internship
+title: "[Application]: Reference Name - Role"
+labels: ["internship", "pending-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Thank you for your interest! 
+        Please fill out the details below accurately. We prioritize production-ready skills and a proactive mindset.
+  - type: input
+    id: full_name
+    attributes:
+      label: Full Name
+      placeholder: e.g. Keshav Mohta
+    validations:
+      required: true
+  - type: dropdown
+    id: role
+    attributes:
+      label: Which role are you applying for?
+      options:
+        - Front-End Development
+        - Back-End & AI Engineering
+        - Full-Stack (Both)
+    validations:
+      required: true
+  - type: checkboxes
+    id: stack
+    attributes:
+      label: Tech Stack Proficiency
+      description: Check the technologies you have experience with.
+      options:
+        - label: HTML/CSS/JS (React.js/Astro)
+        - label: Node.js / Hono.js
+        - label: Python (AI/ML)
+        - label: Computer Vision / Image Processing
+  - type: textarea
+    id: experience
+    attributes:
+      label: Brief Overview of Experience
+      description: Describe a real-world project you have worked on.
+      placeholder: I built a URL shortener using Hono.js and MongoDB...
+    validations:
+      required: true
+  - type: input
+    id: resume
+    attributes:
+      label: Resume Link / Upload
+      description: Provide a link to your PDF or upload it to this issue.
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Availability
+      options:
+        - label: I am available Tue-Sat and can attend the 9 PM DSM on MS Teams.
+          required: true
