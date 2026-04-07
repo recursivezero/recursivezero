@@ -87,7 +87,7 @@ To ensure these projects look professional when shared:
 We are currently looking for **Front-End** and **Back-End/AI** and **MBA in Marketing/sales** interns to work on real-world, high-impact projects.
 
   * **Days:** Tue – Sat | **Sync:** 9 PM (Teams)
-  * 👉 **[View Open Positions & Apply Here](https://github.com/recursivezero/recursivezero/discussions/25)**
+  * 👉 **[View Open Positions & Apply Here](https://github.com/recursivezero/career/discussions/3)**
 
 -----
 
