@@ -1,14 +1,9 @@
 
-# 🚀 Hello, I'm Founder of RecursiveZero
+# 🚀 Hello, from RecursiveZero
 
 Building scalable, production-ready web applications and exploring the frontiers of Computer Vision and Image Processing. We focus on clean architecture, minimal technical debt, and high-performance deployments.
 
 -----
-
-[![Node Version](https://img.shields.io/badge/Node-v22.12.0-339933?style=flat-square&logo=node.js&logoColor=white)](https://nodejs.org)
-[![Astro](https://img.shields.io/badge/Astro-v6.0-BC52EE?style=flat-square&logo=astro&logoColor=white)](https://astro.build)
-[![Ubuntu](https://img.shields.io/badge/Ubuntu-24.04_LTS-E95420?style=flat-square&logo=ubuntu&logoColor=white)](https://ubuntu.com)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
 
 ### 🛠️ Core Tech Stack
 
@@ -30,7 +25,15 @@ To give your GitHub profile or main organization README a sophisticated, product
 
 ### 🧵 The Threadzip Ecosystem
 
-*A unified, AI-driven fabric ecosystem for the Indian industry.*
+*A production-ready, unified, AI-driven fabric ecosystem for the Indian fabric industry.*
+
+<p>
+    <img src="https://img.shields.io/badge/Hono-000000?style=flat-square&logo=hono&logoColor=FF5000" alt="Hono">
+    <img src="https://img.shields.io/badge/Astro-BC52EE?style=flat-square&logo=astro&logoColor=white" alt="Astro">
+    <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
+    <img src="https://img.shields.io/badge/Node-v22.12.0-339933?style=flat-square&logo=node.js&logoColor=white" alt="Node">
+    <img src="https://img.shields.io/badge/OS-Ubuntu-E95420?style=flat-square&logo=ubuntu&logoColor=white" alt="Ubuntu">
+</p>
 
 | Project | Description | Stack | Link |
 | :--- | :--- | :--- | :--- |
