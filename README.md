@@ -5,6 +5,11 @@ Building scalable, production-ready web applications and exploring the frontiers
 
 -----
 
+[![Node Version](https://img.shields.io/badge/Node-v22.12.0-339933?style=flat-square&logo=node.js&logoColor=white)](https://nodejs.org)
+[![Astro](https://img.shields.io/badge/Astro-v6.0-BC52EE?style=flat-square&logo=astro&logoColor=white)](https://astro.build)
+[![Ubuntu](https://img.shields.io/badge/Ubuntu-24.04_LTS-E95420?style=flat-square&logo=ubuntu&logoColor=white)](https://ubuntu.com)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+
 ### 🛠️ Core Tech Stack
 
 | **Area** | **Technologies** |
@@ -17,17 +22,62 @@ Building scalable, production-ready web applications and exploring the frontiers
 -----
 
 ### 🔭 Current Projects
+To give your GitHub profile or main organization README a sophisticated, production-ready feel, I’ve structured your projects into logical tiers. This layout uses **HTML alignment** for a cleaner UI and **Shields.io badges** to signal your technical stack and Ubuntu-centric workflow.
 
-  * **[ABCD KBD](https://abcdkbd.com):** An interactive learning platform for toddlers, rooted in the Indian cultural system and designed for early childhood development.
-  * **[Tech Taboo](https://recursivezero.github.io/taboo/):** An interactive meetup game built with Alpine.js and Astro.
-  * **[Tiny URL](https://rzro.link):** A high-performance URL shortener using Python and Fast API.
-  * **[Threadzip](https://app.threadzip.com):** A Unified platform for fabric ecosystem in India.
-  * **[Threadzip App](https://app.threadzip.com):** A B2B Marketplace for raw material fabric industry.
-  * **[Threadzip Pro](https://pro.threadzip.com):** An AI Chatbot for fabric industry.
-  * **[Threadzip Lab](https://lab.threadzip.com):** An Fabric Analysis and Pattern Generation Tool using AI.
-  * **[RZ-Sample: Python Package](https://pypi.org/project/rz-sample/):** production-ready Streamlit, FastAPI, and Poetry boilerplate to accelerate building and deploying modern data apps.
-  * **[Action-Club](https://github.com/recursivezero/action-club):** A collection of reusable GitHub Actions for rapid project scaffolding.
+-----
 
+## 🏗️ Ecosystem & Projects
+
+### 🧵 The Threadzip Ecosystem
+
+*A unified, AI-driven fabric ecosystem for the Indian industry.*
+
+| Project | Description | Stack | Link |
+| :--- | :--- | :--- | :--- |
+| **Threadzip** | Unified platform for the fabric industry. | `Astro` `Hono.js` | [Explore ↗](https://threadzip.com) |
+| **App** | B2B Marketplace for raw materials. | `React` `Node.js` | [Launch ↗](https://app.threadzip.com) |
+| **Pro** | AI-specialized industry chatbot. | `Python` `LLM` | [Consult ↗](https://pro.threadzip.com) |
+| **Lab** | AI Pattern Generation & Fabric Analysis. | `Python` `CV` | [Analyze ↗](https://lab.threadzip.com) |
+
+-----
+
+### 🛠️ Developer Tools & Infrastructure
+
+*Scalable boilerplates and CI/CD automation for modern web technologies.*
+
+  * **[Action-Club](https://github.com/recursivezero/action-club)**
+    A collection of reusable GitHub Actions for rapid project scaffolding and production-ready deployments.
+  * **[RZ-Sample: Python Package](https://pypi.org/project/rz-sample/)**
+    Production-ready boilerplate for FastAPI and Streamlit apps, optimized for rapid data application deployment.
+  * **[Tiny URL](https://rzro.link)**
+    High-performance URL shortener and redirection service.
+
+-----
+
+### 🎓 Interactive & Community
+
+*Engagement-focused platforms built with minimalist, high-performance stacks.*
+
+  * **[ABCD KBD](https://abcdkbd.com)**
+    An interactive learning platform for toddlers, rooted in the Indian cultural system. Designed for early childhood development with a focus on tactile interaction.
+  * **[Tech Taboo](https://recursivezero.github.io/taboo/)**
+    A high-speed meetup game built with `Alpine.js` and `Astro`, optimized for low-latency interactive sessions.
+
+-----
+
+## 🛠️ Tech Stack & Environment
+
+Documentation and development are standardized on **Ubuntu Desktop** with a focus on type-safety and scalability.
+
+-----
+
+### 🎨 Social Preview Tips for `OpenGraph` compatibility:
+
+To ensure these projects look professional when shared:
+
+1.  **Threadzip Assets:** Ensure `threadzip.com` has an `<meta property="og:image">` pointing to a `1200x630` PNG of the dashboard.
+2.  **GitHub Previews:** For `Action-Club` and `Tech Taboo`, upload a **Custom Social Preview** in the repository settings. Use a dark background with white monospaced text for a "sophisticated" engineering aesthetic.
+3.  **Consistency:** Use a 2px border radius on any preview cards used within the README to match modern UI standards.
 -----
 
 ### 🎓 Internship Opportunities
